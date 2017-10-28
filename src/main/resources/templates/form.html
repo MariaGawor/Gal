@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/form}" method="post" th:object="${form}">
+    <input type="text" placeholder="Imię" class="form-control" id="name" th:field="*{name}"/>
+    <input type="text" placeholder="Nazwisko" class="form-control" id="surname" th:field="*{surname}"/>
+    <input type="text" placeholder="Email" class="form-control" id="email" th:field="*{email}"/>
+    <input type="number" placeholder="Numer Telefonu" class="form-control" id="number" th:field="*{number}"/>
+    <input type="text" placeholder="Wiadomość" class="form-control" id="message" th:field="*{message}"/>
+    <input type="submit" value="Wyślij"/>
+
+
+</form>
+</body>
+</html>
